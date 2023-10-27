@@ -1,0 +1,88 @@
+$color-cutty-sark: #5f8671;
+$color-nero: #292627;
+$color-white: #ffffff;
+$color-yellow: #f0b736;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    background-color: $color-cutty-sark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .circle {
+        position: relative;
+        left: 20px;
+        width: 300px;
+        height: 300px;
+        border: 4px solid $color-yellow;
+        box-shadow: 4px 4px 33px 5px $color-yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        animation: animate-cir 5s infinite;
+        .counter {
+            color: $color-white;
+            font-size: 150px;
+            &:active {
+                color: $color-yellow;
+            }
+    }
+    }
+    .btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        left: 20px;
+        width: 400px;
+        button {
+            height: 70px;
+            width: 350px;   
+            color: #ffffff;
+            padding: 0.7em 1.7em;
+            font-size: 18px;
+            border-radius: 0.5em;
+            background: $color-nero;
+            border: 1px solid $color-nero;
+            transition: all .3s;
+            box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2) inset;
+          }
+          
+          button:hover {
+            border: 1px solid rgb(0, 0, 0);
+            color: $color-yellow;
+            text-shadow: 10px 43px 43px 35px $color-yellow;
+          }
+          
+          button:active {
+            box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.6);
+          }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-left: -40px;
+    }
+}
+
+@keyframes animate-cir {
+    0% {
+        box-shadow: 4px 4px 33px 15px $color-yellow;
+    }
+    50% {
+        box-shadow: 4px 4px 33px 30px $color-yellow;
+    }
+    
+}

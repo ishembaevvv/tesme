@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  background-color: #5f8671;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .circle {
+  position: relative;
+  left: 20px;
+  width: 300px;
+  height: 300px;
+  border: 4px solid #f0b736;
+  box-shadow: 4px 4px 33px 5px #f0b736;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  animation: animate-cir 5s infinite;
+}
+.container .circle .counter {
+  color: #ffffff;
+  font-size: 150px;
+}
+.container .circle .counter:active {
+  color: #f0b736;
+}
+.container .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  left: 20px;
+  width: 400px;
+}
+.container .btns button {
+  height: 70px;
+  width: 350px;
+  color: #ffffff;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #292627;
+  border: 1px solid #292627;
+  transition: all 0.3s;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2) inset;
+}
+.container .btns button:hover {
+  border: 1px solid rgb(0, 0, 0);
+  color: #f0b736;
+  text-shadow: 10px 43px 43px 35px #f0b736;
+}
+.container .btns button:active {
+  box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: -40px;
+  }
+}
+@keyframes animate-cir {
+  0% {
+    box-shadow: 4px 4px 33px 15px #f0b736;
+  }
+  50% {
+    box-shadow: 4px 4px 33px 30px #f0b736;
+  }
+}/*# sourceMappingURL=style.css.map */
